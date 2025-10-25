@@ -1,0 +1,53 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+
+</head>
+<body>
+    {% include "sides/navbar.html" %}
+
+    <div class="thulo">
+
+        
+        {% for i in name %}
+        
+        <div class="cards">
+
+            <div class="title-image">
+                <div class="title">
+                    {{ i.title }}
+                    
+                </div>
+                <div class="image">
+                    <img src="{{ i.image.url }}"/>
+                    
+                </div>
+                
+            </div>
+
+            <div class="author-name">
+              <h5>By: {{ i.authorname }}</h5> 
+
+            </div>
+
+            <div class="description">
+                <p>{{ i.content }}</p>
+                <a href="{% url 'article_detail' i.id %}">Read More</a>
+
+            </div>
+            
+            <!-- image ko lagi -->
+            
+            
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

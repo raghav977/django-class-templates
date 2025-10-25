@@ -1,0 +1,77 @@
+
+.main-card{
+    border: 2px solid black;
+    display: flex;
+    /* gap: 20px; */
+    
+}
+.left-contact{
+
+    border-right: 2px solid black;
+    width: 400px;
+    height: 700px;
+    background-color: black;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.right-contact{
+    /* border: 2px solid green; */
+    width: 500px;
+    /* padding: 200px; */
+    flex: 1;
+
+}
+.heading-contact{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.social-medias{
+    /* border: 2px solid red; */
+    margin-top: 230px;
+    display: flex;
+    gap: 20px;
+}
+.right-contact{
+    background-color: #fff;
+    padding: 80px;
+}
+.right-contact form .namekolagi{
+    display: flex;
+    gap: 200px;
+}
+.right-contact div{
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+.hello{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+}
+label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+input{
+    /* border: 2px solid w; */
+    outline: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+}
+form button{
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    color: black;
+    background-color: rgba(255, 68, 0, 0.797);
+    border-radius: 8px;
+
+}
