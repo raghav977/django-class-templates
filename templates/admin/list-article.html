@@ -1,0 +1,45 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'list-article.css' %}">
+</head>
+<body>
+    <div class="main-list-article">
+        {% include 'admin/layout.html' %}
+
+
+        <div class="right-list-article">
+            {% for i in name %}
+            <div class="content">
+
+                
+                <div class="title">
+                    <p>{{ i.title }}</p>
+                    
+                </div>
+                <div class="image">
+                    <img src="{{ i.image.url }}"/>
+                    
+                </div>
+                <div class="author">
+                    <p>{{ i.authorname }}</p>
+                    
+                </div>
+
+                <div class="buttons-for-edit-delete">
+                    <a href="{% url 'edit-article' i.id %}"> Edit </a>
+                    <a>Delete</a>
+                </div>
+            
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+</body>
+</html>

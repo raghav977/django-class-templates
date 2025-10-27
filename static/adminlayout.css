@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.left-navbar{
+    /* border: 2px solid red; */
+    width: 340px;
+    height: 100vh;
+    background-color: black;
+    padding: 20px;
+
+}
+.left-navbar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.left-navbar ul li{
+    list-style-type: none;
+
+}
+.left-navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}

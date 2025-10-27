@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="{% static 'signup.css' %}">
+
+</head>
+<body>
+    <!-- hamro thulo div ho -->
+     <div class="thulo">
+
+        {% include 'admin/layout.html' %}
+
+        <div class="right-sidbar">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <label>Title</label>
+                    <input type="text" name="title"/>
+                </div>
+
+                <div>
+                    <label>Content</label>
+                    <textarea name="content"></textarea>
+                </div>
+                <div>
+                    <label>Author Name:</label>
+                    <input type="text" name="authorname"/>
+                </div>
+
+                <div>
+                    <label>Image</label>
+                    <input type="file" name="image"/>
+                </div>
+                <div>
+                    <label>Ads</label>
+                    <input type="file" name="ads"/>
+                </div>
+
+                <button type="submit">Create Article</button>
+            </form>
+
+
+        </div>
+        
+     </div>
+</body>
+</html>

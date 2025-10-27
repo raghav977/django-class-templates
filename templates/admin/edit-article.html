@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'edit-article.css' %}">
+</head>
+<body>
+    <form action="{% url 'edit-article' detail.id %}" method="POST">
+        {% csrf_token %}
+        <h1>Edit article Page</h1>
+        <div class="title">
+
+            <label>Title</label>
+            <input type="text" value="{{ detail.title }}" name="edit-title"/>
+        </div>
+        <div>
+
+            <label> Authorname </label>
+            <input type="text" value="{{ detail.authorname }}" name="edit-authorname"/>
+        </div>
+        <div>
+
+            
+            <label>Content</label>
+            <textarea name="edit-content"> 
+                {{ detail.content }}
+            </textarea>
+        </div>
+
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>
